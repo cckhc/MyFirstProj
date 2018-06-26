@@ -9,11 +9,14 @@ import java.util.ArrayList;
 
 class UInfo { // suppose to be used within the same package
     String uName;
-    String uAge;
+    int uAge;
     String uAddr;
+    UInfo(String uName, int uAge, String uAddr){
+        this.uName=uName; this.uAge=uAge;   this.uAddr=uAddr;
+    }
     public ArrayList<String> getUInfo(){
         ArrayList<String> retAL = new ArrayList<String>();
-        retAL.add(uName);   retAL.add(uAge);    retAL.add(uAddr);
+        retAL.add(uName);   retAL.add(String.valueOf(uAge));    retAL.add(uAddr);
         return retAL;
     }
 }
